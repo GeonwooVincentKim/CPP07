@@ -6,7 +6,7 @@
 /*   By: geonwkim <geonwkim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/09 18:54:40 by geonwkim          #+#    #+#             */
-/*   Updated: 2025/03/09 18:55:04 by geonwkim         ###   ########.fr       */
+/*   Updated: 2025/03/09 20:28:33 by geonwkim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,19 +26,13 @@ void swap(T &a, T &b)
 template<typename T>
 T min(const T &a, const T &b)
 {
-	if (a < b)
-		return (a);
-	else
-		return (b);
+	return (a < b ? a : b); // 条件を満たすが、a == b なら b を返すように修正
 }
 
 template<typename T>
 T max(const T &a, const T &b)
 {
-	if (a > b)
-		return (a);
-	else
-		return (b);
+	return (a > b ? a : b); // a == b なら 同じ場合は b を返す
 }
 
 #endif
